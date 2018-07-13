@@ -567,7 +567,7 @@ var _$elinview = function (el, $bd) {
 
   // generate class indetities
   // add prefix , number can't been the first character in classname
-  var classId = "inview-" + shortid.generate()
+  var classId = "vue-inview inview-" + shortid.generate()
   var elSize = classList(el).get().length
 
   // register class element
