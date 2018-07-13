@@ -564,14 +564,15 @@ var object_parent = function (parent, el) {
     - inview directive handler
 **/
 var _$elinview = function (el, $bd) {
-
+  var prefixClass = "vue-inview";
   // generate class indetities
   // add prefix , number can't been the first character in classname
-  var classId = "vue-inview inview-" + shortid.generate()
+  var classId = "inview-" + shortid.generate()
   var elSize = classList(el).get().length
 
   // register class element
   classList(el).add(classId)
+  classList(el).add(prefixClass)
   createEl.register.push({classid: classId,rawName: $bd.rawName})
 
   // if directive value not registed
